@@ -20,3 +20,20 @@ ________________________
 Game of Hex using an uptree to determine if a player has won. Moves are made
 by selecting the appropriate number of the grid space (starting at 0 for the 
 top left). Game is in color in terminal.
+
+### Chess
+
+```
+   a  b  c  d  e  f  g  h
+1  R  N  B  Q  K  B  N  R 
+2  P  P  P  P  P  P  P  P 
+3                         
+4                         
+5                         
+6                         
+7  P  P  P  P  P  P  P  P 
+8  R  N  B  Q  K  B  N  R 
+```
+
+Game of Chess. Moves are made using long algebraic notation (ex. the common 
+opening e4 would be written as e2e4). 
