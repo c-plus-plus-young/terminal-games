@@ -36,20 +36,43 @@ public class gameBoard {
         board[0][1][1] = textBlue;
         board[0][6][0] = "N";
         board[0][6][1] = textBlue;
-        board[0][5][0] = "R";
+        board[0][2][0] = "B";
+        board[0][2][1] = textBlue;
+        board[0][5][0] = "B";
         board[0][5][1] = textBlue;
-        board[]
-
+        board[0][3][0] = "Q";
+        board[0][3][1] = textBlue;
+        board[0][4][0] = "K";
+        board[0][4][1] = textBlue;
 
         for (int i = 0; i < 8; i++) {
             board[6][i][0] = "P";
             board[6][i][1] = textRed;
         }
+
+        board[7][0][0] = "R";
+        board[7][0][1] = textRed;
+        board[7][7][0] = "R";
+        board[7][7][1] = textRed;
+        board[7][1][0] = "N";
+        board[7][1][1] = textRed;
+        board[7][6][0] = "N";
+        board[7][6][1] = textRed;
+        board[7][2][0] = "B";
+        board[7][2][1] = textRed;
+        board[7][5][0] = "B";
+        board[7][5][1] = textRed;
+        board[7][3][0] = "Q";
+        board[7][3][1] = textRed;
+        board[7][4][0] = "K";
+        board[7][4][1] = textRed;
     }
 
     public void printBoard(){
-        String backgroundColor = "\u001B[47m";
+        String backgroundColor = defaultBackgroundColor;
+        System.out.println(backgroundColor + "   a  b  c  d  e  f  g  h");
         for (int i = 0; i < 8; i ++) {
+            System.out.print((i + 1) + " ");
             for (int j = 0; j < 8; j++) {
                 if (i % 2 != 0 ^ j % 2 != 0) {
                     backgroundColor = backgroundBlack;

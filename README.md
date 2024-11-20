@@ -2,6 +2,21 @@
 Simple games that can be played in the terminal
 
 ### Hex
+```
+________________________
+| 0 B R 0 0 0 R 0 0 0 0 |
+ | 0 B R 0 0 0 R 0 0 R 0 |
+  | 0 0 0 0 0 0 R 0 0 R 0 |
+   | 0 0 0 0 0 R 0 0 0 B 0 |
+    | 0 0 B B B R R 0 B 0 0 |
+     | B B B 0 B 0 R B 0 0 0 |
+      | 0 0 0 B 0 R 0 B 0 0 0 |
+       | 0 0 0 B B B B 0 0 0 0 |
+        | 0 0 0 0 R R 0 0 0 0 0 |
+         | 0 0 R 0 0 0 0 0 0 0 0 |
+          | 0 R 0 R 0 0 0 0 0 0 0 |
+           ------------------------
+```
 Game of Hex using an uptree to determine if a player has won. Moves are made
 by selecting the appropriate number of the grid space (starting at 0 for the 
-top left). 
+top left). Game is in color in terminal.
