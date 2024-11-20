@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class runTests {
-    public void runAllTests() {
+    public static void runAllTests() {
         long smartTestBefore = System.nanoTime();
         tests();
         long smartTestAfter = System.nanoTime();
