@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class gameBoard {
     String[][][] board;
 
@@ -20,8 +21,12 @@ public class gameBoard {
 //CYAN 	\u001B[36m 	CYAN_BACKGROUND 	\u001B[46m
 //WHITE 	\u001B[37m 	WHITE_BACKGROUND 	\u001B[47m
 
+
+    String winColor = null;
+    Scanner scanner;
     gameBoard() {
         board = new String[8][8][2];
+        scanner = new Scanner(System.in);
 
         //fill pawn rows
         for (int i = 0; i < 8; i++) {
@@ -89,4 +94,45 @@ public class gameBoard {
             System.out.println(defaultBackgroundColor);
         }
     }
+
+    public void playGame() {
+
+        while (winColor == null) {
+            takeTurn("White");
+            takeTurn("Black");
+        }
+        printBoard();
+        if (winColor == "Stalemate") {
+            System.out.println(winColor);
+        } else {
+            System.out.println(winColor + " wins.");
+        }
+    }
+
+    private void takeTurn(String color) {
+        printBoard();
+        System.out.println(color + " to move.");
+        if (scanner.hasNext()) {
+
+        } else {
+            System.out.println("Invalid move");
+        }
+    }
+
+//    moves are in long algebraic notation: ex e2e4 for common starting move, white pawn to e4
+//    0-0 (for kingside castling) and 0-0-0 (queenside castling).
+//    O-O and O-O-O (letter O rather than digit 0) are also commonly used
+//    = is a draw offer
+
+//    store all moves in a file
+//    put x on file when piece is captured
+//    + means check
+//    =Q for pawn promoting to queen
+//    # for checkmate
+//
+//    The notation 1–0 at the completion of moves indicates that White won, 0–1 indicates that
+//    Black won, and ½–½ indicates a draw. In case of forfeit, the scores 0–0, ½–0, and 0–½ are
+//    also possible.[7][8] If player(s) lost by default, results are +/−, −/+, or −/−.
+//    (1/2 listed above is only possible if a checkmate is impossible by one player, ie they
+//    don't have enough material to capture)
 }
