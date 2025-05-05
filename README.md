@@ -21,7 +21,7 @@ Game of Hex using an uptree to determine if a player has won. Moves are made
 by selecting the appropriate number of the grid space (starting at 0 for the 
 top left). Game is in color in terminal.
 
-### Chess
+### Chess - STILL IN DEVELOPMENT
 
 ```
    a  b  c  d  e  f  g  h
